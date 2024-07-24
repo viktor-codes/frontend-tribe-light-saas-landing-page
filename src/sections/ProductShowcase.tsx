@@ -4,7 +4,7 @@ export const ProductShowcase = () => {
 	return (
 		<section className='bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 '>
 			<div className='container'>
-				<div>Boost Your productivity</div>
+				<div className='tag'>Boost Your productivity</div>
 				<h2>A more effective way to track progress</h2>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet
