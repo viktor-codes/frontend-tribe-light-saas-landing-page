@@ -1,3 +1,7 @@
+import Image from 'next/image'
+import ArrowRight from '../assets/arrow-right.svg'
+import cogImage from '../assets/cog.png'
+
 export const Hero = () => {
 	return (
 		<section>
@@ -17,9 +21,15 @@ export const Hero = () => {
 					</p>
 				</div>
 				<div className='flex items-center gap-1 mt-[30px]'>
-					<button>Get for free</button>
-					<button>Learn more</button>
+					<button className='btn btn-primary'>Get for free</button>
+					<button className='btn btn-text gap-1'>
+						<span>Learn more</span>
+						<ArrowRight className='w-5 h-5' />
+					</button>
 				</div>
+			</div>
+			<div>
+				<Image src={cogImage} alt='couple' />
 			</div>
 		</section>
 	)
