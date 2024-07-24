@@ -6,8 +6,8 @@ export const Hero = () => {
 	return (
 		<section className='pt-8 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom__left,#183EC2,#EAEEFE_66%)]'>
 			<div className='container'>
-				<div className='md:flex'>
-					<div>
+				<div className='md:flex items-center'>
+					<div className='md:w-[478px]'>
 						<div className='text-sm inline-flex border border-[#222}/10 px-3 py-1 rounded-lg tracking-tight mt-6'>
 							Version 2.0 is here
 						</div>
@@ -29,8 +29,12 @@ export const Hero = () => {
 							</button>
 						</div>
 					</div>
-					<div className='mt-20'>
-						<Image src={cogImage} alt='Cog' />
+					<div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
+						<Image
+							src={cogImage}
+							alt='Cog'
+							className='md:absolute md:h-full md:w-auto md:max-w-none'
+						/>
 					</div>
 				</div>
 			</div>
