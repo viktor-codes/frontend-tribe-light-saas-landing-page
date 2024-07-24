@@ -74,16 +74,25 @@ export const Pricing = () => {
 							inverse,
 							features,
 						}) => (
-							<div>
-								<h3>{title}</h3>
-								<div>
-									<span>${monthlyPrice}</span>
-									<span>/month</span>
+							<div
+								key={title}
+								className='p-10 border border-[#F1F1F1] rounded-3xl shadow-[0_7px_14px_#EAEAEA]'
+							>
+								<h3 className='text-lg font-bold text-black/50'>{title}</h3>
+								<div className='flex items-baseline gap-1 mt-[30px]'>
+									<span className='text-4xl font-bold tracking-tighter leading-none'>
+										${monthlyPrice}
+									</span>
+									<span className='tracking-tight font-bold text-black/50'>
+										/month
+									</span>
 								</div>
-								<button>{buttonText}</button>
-								<ul>
-									{features.map(feature => (
-										<li>
+								<button className='btn btn-primary w-full mt-[30px]'>
+									{buttonText}
+								</button>
+								<ul className='flex flex-col gap-5 mt-8'>
+									{features.map((feature, index) => (
+										<li key={index} className='text-sm flex items-center gap-4'>
 											<CheckIcon className='h-6 w-6' />
 											<span>{feature}</span>
 										</li>
