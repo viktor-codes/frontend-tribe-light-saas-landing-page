@@ -54,15 +54,41 @@ const pricingTiers = [
 
 export const Pricing = () => {
 	return (
-		<section>
+		<section className='py-24'>
 			<div className='container'>
 				<h2 className='section-title'>Pricing</h2>
-				<p className='section-description'>
+				<p className='section-description mt-5'>
 					Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam a
 					asperiores praesentium numquam, quae fugiat vitae magnam recusandae
 					quisquam minus. Nam eveniet magnam saepe molestiae, voluptatem
 					voluptatum. A, voluptate tenetur!
 				</p>
+				<div>
+					{pricingTiers.map(
+						({
+							title,
+							monthlyPrice,
+							buttonText,
+							popular,
+							inverse,
+							features,
+						}) => (
+							<div>
+								<h3>{title}</h3>
+								<div>
+									<span>${monthlyPrice}</span>
+									<span>/month</span>
+								</div>
+								<button>{buttonText}</button>
+								<ul>
+									{features.map(feature => (
+										<li>{feature}</li>
+									))}
+								</ul>
+							</div>
+						)
+					)}
+				</div>
 			</div>
 		</section>
 	)
