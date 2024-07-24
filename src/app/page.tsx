@@ -1,3 +1,4 @@
+import { LogoTicker } from '@/sections/LogoTicker'
 import { Header } from '../sections/Header'
 import { Hero } from '../sections/Hero'
 export default function Home() {
@@ -5,6 +6,7 @@ export default function Home() {
 		<>
 			<Header />
 			<Hero />
+			<LogoTicker />
 		</>
 	)
 }
