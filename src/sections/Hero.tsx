@@ -4,7 +4,7 @@ import cogImage from '../assets/cog.png'
 
 export const Hero = () => {
 	return (
-		<section>
+		<section className='pt-8 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom__left,#183EC2,#EAEEFE_66%)]'>
 			<div className='container'>
 				<div>
 					<div className='text-sm inline-flex border border-[#222}/10 px-3 py-1 rounded-lg tracking-tight mt-6'>
@@ -28,8 +28,8 @@ export const Hero = () => {
 					</button>
 				</div>
 			</div>
-			<div>
-				<Image src={cogImage} alt='couple' />
+			<div className='mt-20'>
+				<Image src={cogImage} alt='Cog' />
 			</div>
 		</section>
 	)
