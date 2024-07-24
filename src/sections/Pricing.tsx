@@ -1,4 +1,5 @@
 'use client'
+import CheckIcon from '../assets/check.svg'
 
 const pricingTiers = [
 	{
@@ -82,7 +83,10 @@ export const Pricing = () => {
 								<button>{buttonText}</button>
 								<ul>
 									{features.map(feature => (
-										<li>{feature}</li>
+										<li>
+											<CheckIcon className='h-6 w-6' />
+											<span>{feature}</span>
+										</li>
 									))}
 								</ul>
 							</div>
