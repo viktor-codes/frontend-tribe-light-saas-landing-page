@@ -120,8 +120,14 @@ export const Testimonials = () => {
 				</p>
 				<div className='flex justify-center gap-6'>
 					<TestimonialsColumns testimonials={firstColumn} />
-					<TestimonialsColumns testimonials={secondColumn} />
-					<TestimonialsColumns testimonials={thirdColumn} />
+					<TestimonialsColumns
+						testimonials={secondColumn}
+						className='hidden md:flex'
+					/>
+					<TestimonialsColumns
+						testimonials={thirdColumn}
+						className='hidden lg:flex'
+					/>
 				</div>
 			</div>
 		</section>
