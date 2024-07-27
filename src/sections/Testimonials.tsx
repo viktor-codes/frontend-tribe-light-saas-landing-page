@@ -66,6 +66,10 @@ const testimonials = [
 	},
 ]
 
+const firstColumn = testimonials.slice(0, 3)
+const secondColumn = testimonials.slice(3, 6)
+const thirdColumn = testimonials.slice(6, 9)
+
 export const Testimonials = () => {
 	return (
 		<section className='bg-white'>
@@ -80,6 +84,11 @@ export const Testimonials = () => {
 					laboriosam nemo aperiam iusto, consequatur numquam suscipit hic esse
 					tempore qui perferendis?
 				</p>
+				<div>
+					{firstColumn.map(({ text, imageSrc, name, username }) => (
+						<div key={name} className='card'></div>
+					))}
+				</div>
 			</div>
 		</section>
 	)
