@@ -1,3 +1,4 @@
+import { CallToAction } from '@/sections/CallToAction'
 import { LogoTicker } from '@/sections/LogoTicker'
 import { Testimonials } from '@/sections/Testimonials'
 import { Header } from '../sections/Header'
@@ -14,6 +15,7 @@ export default function Home() {
 			<ProductShowcase />
 			<Pricing />
 			<Testimonials />
+			<CallToAction />
 		</>
 	)
 }
