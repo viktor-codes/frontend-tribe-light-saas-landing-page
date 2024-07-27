@@ -10,6 +10,7 @@ import avatar8 from '@/assets/avatar-8.png'
 import avatar9 from '@/assets/avatar-9.png'
 
 import Image from 'next/image'
+import { twMerge } from 'tailwind-merge'
 
 const testimonials = [
 	{
@@ -72,9 +73,17 @@ const firstColumn = testimonials.slice(0, 3)
 const secondColumn = testimonials.slice(3, 6)
 const thirdColumn = testimonials.slice(6, 9)
 
-const TestimonialsColumns = (props: unknown) => (
-	<div className='flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]'>
-		{firstColumn.map(({ text, imageSrc, name, username }) => (
+const TestimonialsColumns = (props: {
+	className?: string
+	testimonials: typeof testimonials
+}) => (
+	<div
+		className={twMerge(
+			'flex flex-col gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]',
+			props.className
+		)}
+	>
+		{props.testimonials.map(({ text, imageSrc, name, username }) => (
 			<div key={name} className='card'>
 				<div>{text}</div>
 				<div className='flex flex-row items-center gap-2 mt-5'>
@@ -109,7 +118,11 @@ export const Testimonials = () => {
 					laboriosam nemo aperiam iusto, consequatur numquam suscipit hic esse
 					tempore qui perferendis?
 				</p>
-				<div className='flex justify-center gap-6'></div>
+				<div className='flex justify-center gap-6'>
+					<TestimonialsColumns testimonials={firstColumn} />
+					<TestimonialsColumns testimonials={secondColumn} />
+					<TestimonialsColumns testimonials={thirdColumn} />
+				</div>
 			</div>
 		</section>
 	)
