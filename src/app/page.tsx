@@ -1,4 +1,5 @@
 import { LogoTicker } from '@/sections/LogoTicker'
+import { Testimonials } from '@/sections/Testimonials'
 import { Header } from '../sections/Header'
 import { Hero } from '../sections/Hero'
 import { Pricing } from '../sections/Pricing'
@@ -12,6 +13,7 @@ export default function Home() {
 			<LogoTicker />
 			<ProductShowcase />
 			<Pricing />
+			<Testimonials />
 		</>
 	)
 }

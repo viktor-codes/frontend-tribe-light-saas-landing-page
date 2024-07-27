@@ -67,5 +67,20 @@ const testimonials = [
 ]
 
 export const Testimonials = () => {
-	return <section className='bg-white'></section>
+	return (
+		<section className='bg-white'>
+			<div className='container'>
+				<div className='flex justify-center'>
+					<div className='tag'>Testimonials</div>
+				</div>
+				<h2 className='section-title mt-5'>What our users say</h2>
+				<p className='section-description mt-5'>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
+					voluptates nihil eaque repudiandae quo quam, facere, reiciendis ipsam
+					laboriosam nemo aperiam iusto, consequatur numquam suscipit hic esse
+					tempore qui perferendis?
+				</p>
+			</div>
+		</section>
+	)
 }
