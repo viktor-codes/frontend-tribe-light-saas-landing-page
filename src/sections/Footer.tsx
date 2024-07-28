@@ -10,7 +10,9 @@ export const Footer = () => {
 	return (
 		<footer className='bg-black text-[#BCBCBC] text-sm py-10 text-center'>
 			<div className='container'>
-				<Image src={logo} alt='logo' width={40} height={40} />
+				<div className='inline-flex relative before:content-[""] before:h-full before:w-full before:absolute'>
+					<Image src={logo} alt='logo' width={40} height={40} />
+				</div>
 				<nav>
 					<a href=''>About</a>
 					<a href=''>Features</a>
