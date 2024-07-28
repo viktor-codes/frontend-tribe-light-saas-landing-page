@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import ArrowRight from '../assets/arrow-right.svg'
 import cogImage from '../assets/cog.png'
 import cylinder from '../assets/cylinder.png'
@@ -69,12 +68,16 @@ export const Hero = () => {
 								translateY: translateY,
 							}}
 						/>
-						<Image
-							src={noodle}
+						<motion.img
+							src={noodle.src}
 							alt='noodle'
 							width={220}
 							height={220}
 							className='hidden lg:block absolute top-[524px] left-[448px] rotate-[30deg]'
+							style={{
+								rotate: 30,
+								translateY: translateY,
+							}}
 						/>
 					</div>
 				</div>
