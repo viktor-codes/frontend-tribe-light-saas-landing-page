@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import logo from '../assets/logo.svg'
+import logo from '../assets/logosaas.png'
 import SocialInsta from '../assets/social-insta.svg'
 import SocialLinkedIn from '../assets/social-linkedin.svg'
 import SocialPin from '../assets/social-pin.svg'
@@ -20,21 +20,11 @@ export const Footer = () => {
 					<a href=''>Careers</a>
 				</nav>
 				<div>
-					<Image src={SocialX} alt='social-x' width={20} height={20} />
-					<Image src={SocialInsta} alt='social-insta' width={20} height={20} />
-					<Image
-						src={SocialLinkedIn}
-						alt='social-linkedin'
-						width={20}
-						height={20}
-					/>
-					<Image src={SocialPin} alt='social-pin' width={20} height={20} />
-					<Image
-						src={SocialYouTube}
-						alt='social-youtube'
-						width={20}
-						height={20}
-					/>
+					<SocialInsta />
+					<SocialLinkedIn />
+					<SocialPin />
+					<SocialX />
+					<SocialYouTube />
 				</div>
 			</div>
 		</footer>
