@@ -11,7 +11,6 @@ import avatar8 from '@/assets/avatar-8.png'
 import avatar9 from '@/assets/avatar-9.png'
 
 import Image from 'next/image'
-import { twMerge } from 'tailwind-merge'
 
 import React from 'react'
 
@@ -80,8 +79,8 @@ const TestimonialsColumns = (props: {
 	className?: string
 	testimonials: typeof testimonials
 }) => (
-	<div>
-		<div className={twMerge('flex flex-col gap-6', props.className)}>
+	<div className={props.className}>
+		<div className='flex flex-col gap-6'>
 			{[...new Array(2)].fill(0).map((_, index) => (
 				<React.Fragment key={index}>
 					{props.testimonials.map(({ text, imageSrc, name, username }) => (
