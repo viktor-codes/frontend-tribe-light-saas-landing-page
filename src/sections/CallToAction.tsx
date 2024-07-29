@@ -1,11 +1,23 @@
-import Image from 'next/image'
+'use client'
+
 import ArrowRight from '../assets/arrow-right.svg'
 import springImage from '../assets/spring.png'
 import starImage from '../assets/star.png'
 
+import { useScroll } from 'framer-motion'
+import { useRef } from 'react'
+
 export const CallToAction = () => {
+	const sectionRef = useRef(null)
+	const { scrollYProgress } = useScroll({
+		target: sectionRef,
+		offset: ['start end', 'end start'],
+	})
 	return (
-		<section className='bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip'>
+		<section
+			ref={sectionRef}
+			className='bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip'
+		>
 			<div className='container'>
 				<div className='section-heading relative'>
 					<h2 className='section-title'>Sign up fo free today</h2>
@@ -15,14 +27,14 @@ export const CallToAction = () => {
 						debitis harum accusamus minima suscipit magnam, atque iure! Tempore
 						esse ut impedit nostrum obcaecati.
 					</p>
-					<Image
-						src={starImage}
+					<motion.img
+						src={starImage.src}
 						alt='star'
 						width={360}
 						className='absolute -left-[350px] -top-[137px]'
 					/>
-					<Image
-						src={springImage}
+					<motion.img
+						src={springImage.src}
 						alt='spring'
 						width={360}
 						className='absolute -right-[331px] -top-[19px]'
