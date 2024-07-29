@@ -10,8 +10,8 @@ import avatar7 from '@/assets/avatar-7.png'
 import avatar8 from '@/assets/avatar-8.png'
 import avatar9 from '@/assets/avatar-9.png'
 
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-
 import React from 'react'
 
 const testimonials = [
@@ -78,9 +78,21 @@ const thirdColumn = testimonials.slice(6, 9)
 const TestimonialsColumns = (props: {
 	className?: string
 	testimonials: typeof testimonials
+	duration?: number
 }) => (
 	<div className={props.className}>
-		<div className='flex flex-col gap-6'>
+		<motion.div
+			animate={{
+				translateY: '-50%',
+			}}
+			transition={{
+				repeat: Infinity,
+				ease: 'linear',
+				repeatType: 'loop',
+				duration: props.duration || 10,
+			}}
+			className='flex flex-col gap-6 pb-6 -translate-y-1/2'
+		>
 			{[...new Array(2)].fill(0).map((_, index) => (
 				<React.Fragment key={index}>
 					{props.testimonials.map(({ text, imageSrc, name, username }) => (
@@ -105,7 +117,7 @@ const TestimonialsColumns = (props: {
 					))}
 				</React.Fragment>
 			))}
-		</div>
+		</motion.div>
 	</div>
 )
 
@@ -125,15 +137,17 @@ export const Testimonials = () => {
 						hic esse tempore qui perferendis?
 					</p>
 				</div>
-				<div className='flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]'>
-					<TestimonialsColumns testimonials={firstColumn} />
+				<div className='flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] '>
+					<TestimonialsColumns testimonials={firstColumn} duration={15} />
 					<TestimonialsColumns
 						testimonials={secondColumn}
-						className='hidden md:flex'
+						className='hidden md:block'
+						duration={19}
 					/>
 					<TestimonialsColumns
 						testimonials={thirdColumn}
-						className='hidden lg:flex'
+						className='hidden lg:block'
+						duration={17}
 					/>
 				</div>
 			</div>
